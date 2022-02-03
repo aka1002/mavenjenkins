@@ -20,13 +20,6 @@ pipeline
             }
         }
 
-        stage('Deploy') 
-        {
-            steps 
-            {
-                echo 'Deploy App'
-            }
-        }
     }
 }
    
