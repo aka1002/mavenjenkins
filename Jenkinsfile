@@ -29,13 +29,4 @@ pipeline
         }
     }
 
-    post
-    {
-
-    	always
-    	{
-    		emailext body: 'passed pipeline', subject: '', to: 'akankshaskt2016@gmail.com'
-    	}
-
-    }
-}
+   
