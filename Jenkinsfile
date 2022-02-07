@@ -13,7 +13,7 @@ pipeline
         }
         stage('Test') 
         {
-            when { equals expected: true, actual: Test }
+             when (BRANCH_NAME != 'master') 
             steps 
             {
                 echo 'Build App'
