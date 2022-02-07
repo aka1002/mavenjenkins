@@ -17,9 +17,12 @@ pipeline
         stage('Test') 
         {
            when {
-               
-                branch 'develop'
-                
+                beforeInput true
+                branch 'master'  
+            }
+            input {
+                message "want to test?"
+                id "test"
             }
             steps 
             {
