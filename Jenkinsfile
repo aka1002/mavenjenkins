@@ -13,10 +13,10 @@ pipeline
         }
         stage('Test') 
         {
-             when (BRANCH_NAME != 'master') 
+             
             steps 
             {
-                echo 'Build App'
+                echo 'Test'
             }
         }
 
