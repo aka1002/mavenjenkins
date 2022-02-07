@@ -16,10 +16,10 @@ pipeline
         }
         stage('Test') 
         {
-           when {
+           
                 beforeInput true
                  
-            }
+            
             input {
                 message "want to test?"
                 id "test"
