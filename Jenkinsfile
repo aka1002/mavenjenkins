@@ -14,7 +14,7 @@ pipeline
         stage('Test') 
         {
             when {
-         expression { params.REQUESTED_ACTION != 'SILENCE' }
+          expression { BRANCH_NAME != 'master'}
              }   
             steps 
             {
