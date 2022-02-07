@@ -17,9 +17,9 @@ pipeline
         stage('Test') 
         {
            when {
-               beforeInput true
-                branch 'master'
-                environment name: 'Test', value: 'master'
+               
+                branch 'develop'
+                
             }
             steps 
             {
