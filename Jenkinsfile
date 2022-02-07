@@ -15,16 +15,19 @@ pipeline
             }
         }
         stage('Test') 
-        {
-           when {
-                branch 'master'
+        { 
+            when{
+            expression { params.REQUESTED_ACTION == 'greeting' }
             }
+//            when {
+//                 branch 'master'
+//             }
                  
             
-            input {
-                message "want to test?"
-                id "test"
-            }
+//             input {
+//                 message "want to test?"
+//                 id "test"
+//             }
             steps 
             {
                 echo 'Test'
