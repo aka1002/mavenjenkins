@@ -12,11 +12,11 @@ pipeline
             }
         }
 
-        stage('Test') 
+        stage('deploy') 
         {
             steps 
             {
-                echo 'Test App'
+                input 'Ready to go?     Proceed or Abort'
             }
         }
 
