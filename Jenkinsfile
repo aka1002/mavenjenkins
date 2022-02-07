@@ -16,8 +16,12 @@ pipeline
         }
         stage('Test') 
         { 
-            when{
-            expression { params.REQUESTED_ACTION == 'greeting' }
+           agent {
+                label "some-label"
+            }
+            when {
+                beforeAgent true
+                branch 'production'
             }
 //            when {
 //                 branch 'master'
