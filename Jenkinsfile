@@ -18,7 +18,7 @@ pipeline
         {
            when {
                 beforeInput true
-                branch 'master'  
+                 
             }
             input {
                 message "want to test?"
