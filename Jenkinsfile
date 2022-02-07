@@ -13,7 +13,9 @@ pipeline
         }
         stage('Test') 
         {
-             
+            when {
+         expression { params.REQUESTED_ACTION != 'SILENCE' }
+             }   
             steps 
             {
                 echo 'Test'
