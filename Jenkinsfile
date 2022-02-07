@@ -1,4 +1,4 @@
-def isValidationSuccess = true 
+
 
 pipeline 
 {
@@ -6,16 +6,7 @@ pipeline
 
     stages 
     {
-       stage("Validate") {
-        when {
-            environment name: 'VALIDATION_REQUIRED', value: 'true'
-        }
-        steps {
-            if(some_condition){
-                isValidationSuccess = false;
-            }
-        }
-    } 
+       
         stage('Build') 
         {
             steps 
@@ -25,9 +16,10 @@ pipeline
         }
         stage('Test') 
         {
-            when {
-            expression { isValidationSuccess == true }
-        }   
+           when {
+                branch 'master'
+                environment name: 'Test', value: 'any'
+            }
             steps 
             {
                 echo 'Test'
