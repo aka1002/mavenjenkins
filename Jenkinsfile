@@ -11,6 +11,14 @@ pipeline
                 echo 'Build App'
             }
         }
+        stage('Test') 
+        {
+            when { equals expected: true, actual: Test }
+            steps 
+            {
+                echo 'Build App'
+            }
+        }
 
         stage('deploy') 
         {
