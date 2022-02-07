@@ -1,9 +1,21 @@
+def isValidationSuccess = true 
+
 pipeline 
 {
     agent any
 
     stages 
     {
+       stage("Validate") {
+        when {
+            environment name: 'VALIDATION_REQUIRED', value: 'true'
+        }
+        steps {
+            if(some_condition){
+                isValidationSuccess = false;
+            }
+        }
+    } 
         stage('Build') 
         {
             steps 
@@ -14,8 +26,8 @@ pipeline
         stage('Test') 
         {
             when {
-          expression { BRANCH_NAME != 'master'}
-             }   
+            expression { isValidationSuccess == true }
+        }   
             steps 
             {
                 echo 'Test'
