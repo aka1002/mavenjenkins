@@ -17,6 +17,10 @@ pipeline
             steps 
             {
                 input 'Ready to go?     Proceed or Abort'
+                parameters
+                {
+                    Type:String
+                }
             }
         }
 
