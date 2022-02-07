@@ -16,7 +16,7 @@ pipeline
         {
             steps 
             {
-                input 'Ready to go?     Proceed or Abort '
+                input 'deploy to QA ?     Proceed or Abort '
                 
                    
                 
