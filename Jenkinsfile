@@ -16,8 +16,9 @@ pipeline
         }
         stage('Test') 
         {
-           
-                beforeInput true
+           when {
+                branch 'master'
+            }
                  
             
             input {
