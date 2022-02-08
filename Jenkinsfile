@@ -11,9 +11,7 @@ pipeline
         {
             steps 
             { 
-               environment {
-                    Path = "C:\Program Files\Git\bin"
-                         } 
+               
                 sh "sed -i \'s/Akku/Sopra/g\' config.properties"
                 //bat  'get-content config.properties'
                 echo 'Build App'
