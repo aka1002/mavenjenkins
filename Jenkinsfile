@@ -10,7 +10,10 @@ pipeline
         stage('Build') 
         {
             steps 
-            {
+            { 
+                sh 'cat temp.txt'
+                sh "sed -i 's/sopra/akku/g' config.properties"
+                sh 'cat temp.txt'
                 echo 'Build App'
             }
         }
