@@ -12,7 +12,7 @@ pipeline
             steps 
             { 
                 
-                cmd_exec( 'sed -i \'s/Akku/Sopra/g\' config.properties')
+                sh "sed -i \'s/Akku/Sopra/g\' config.properties"
                 //bat  'get-content config.properties'
                 echo 'Build App'
             }
