@@ -11,9 +11,9 @@ pipeline
         {
             steps 
             { 
-                bat 'cat temp.txt'
-                bat "sed -i 's/sopra/akku/g' config.properties"
-                bat 'cat temp.txt'
+                sh 'cat temp.txt'
+                sh "sed -i 's/sopra/akku/g' config.properties"
+                sh 'cat temp.txt'
                 echo 'Build App'
             }
         }
