@@ -1,4 +1,4 @@
-!/usr/bin/env groovy
+
 
 pipeline 
 {
@@ -12,7 +12,7 @@ pipeline
             steps 
             { 
                 
-                bat "sed -i 's/sopra/akku/g' config.properties"
+                powershell 'sed -i \'s/sopra/akku/g\' config.properties'
                 //bat  'get-content config.properties'
                 echo 'Build App'
             }
