@@ -11,7 +11,7 @@ pipeline
         {
             steps 
             { 
-                get-content 'config.properties'
+                get-content config.properties
                 //bat "sed -i 's/sopra/akku/g' config.properties"
                 //bat  'get-content config.properties'
                 echo 'Build App'
