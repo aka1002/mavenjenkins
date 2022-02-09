@@ -12,19 +12,16 @@ pipeline
             steps 
             { 
                
-                sh "sed -i \'s/Akku/Sopra/g\' config.properties"
-                //bat  'get-content config.properties'
+                
                 echo 'Build App'
             }
         }
         stage('Test') 
         { 
-           agent {
-                label "some-label"
-            }
+           
             when {
-                beforeAgent true
-                branch 'production'
+                
+                branch 'master'
             }
 //            when {
 //                 branch 'master'
