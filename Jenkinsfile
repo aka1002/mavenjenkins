@@ -11,7 +11,7 @@ pipeline
         {
             steps 
             { 
-               
+               mvn clean
                 
                 echo 'Build App'
             }
