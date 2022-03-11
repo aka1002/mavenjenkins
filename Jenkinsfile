@@ -16,38 +16,38 @@ pipeline
                 echo 'Build App'
             }
         }
-        stage('Test') 
-        { 
+//         stage('Test') 
+//         { 
            
-            when {
+//             when {
                 
-                branch 'master'
-            }
-//            when {
 //                 branch 'master'
 //             }
+// //            when {
+// //                 branch 'master'
+// //             }
                  
             
-//             input {
-//                 message "want to test?"
-//                 id "test"
+// //             input {
+// //                 message "want to test?"
+// //                 id "test"
+// //             }
+//             steps 
+//             {
+//                 echo 'Test'
 //             }
-            steps 
-            {
-                echo 'Test'
-            }
-        }
+//         }
 
-        stage('deploy') 
-        {
-            steps 
-            {
-                input 'deploy to QA ?     Proceed or Abort '
+//         stage('deploy') 
+//         {
+//             steps 
+//             {
+//                 input 'deploy to QA ?     Proceed or Abort '
                 
                    
                 
-            }
-        }
+//             }
+//         }
 
     }
 }
